@@ -1,0 +1,122 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Invoice</title>
+	<link rel="stylesheet"type = "text/css" href="AddProducts.css">
+	<script src="AddProducts.js"></script>
+</head>
+	
+
+
+<body>
+	<div name="Bill" id = "BillReceipt">
+		<header>
+			<h1>Add Products</h1>
+			<address contenteditable=="false">
+				<p>Ranga Rajan Stores</p>
+				<p> 24-E Champa Nagar<br>Jogipet, Hyderabad</p>
+				<p>08-5555-1234</p><br><br>
+		
+			</address>
+			
+		</header>
+		
+		
+		
+
+
+		<article>
+			<h1>Seller</h1>
+			<address contenteditable="false">
+				<p>SELLER:</p><br><br>
+				<label for="Rname"> Name/Company:</label><input type="text" id="Rname" name="Rname"><br><br>
+				<label for="Rnumber">Mobile Number:</label><input type="text" id="Rnum" name="Rnum"><br><br>
+			</address>
+			
+			<h1>Date:</h1><p id="Date"></p><br><br><br>
+			
+			<table class="meta">
+				<tr>
+					<th><span contenteditable="false">Invoice #</span></th>
+					<td><span contenteditable>101138</span></td>
+				</tr>
+				
+				<tr>
+					<th><span contenteditable="false">Amount Due</span></th>
+					<td><span id="prefix" contenteditable>₹</span><span>0.00</span></td>
+				</tr>
+			</table>
+			
+
+
+			<table class="inventory">
+				<thead>
+					<tr>
+						<th><span contenteditable="false">Item Number</span></th>
+						<th><span contenteditable="false">Item Name</span></th>
+						<th><span contenteditable="false">Rate</span></th>
+						<th><span contenteditable="false">Quantity</span></th>
+						<th><span contenteditable="false">Price</span></th>
+					</tr>
+				</thead>
+				
+
+				<tbody>
+					<tr>
+						<td><a class="cut">-</a><span contenteditable>#</span></td>
+						<td><span contenteditable></span></td>
+						<td><span data-prefix>₹ </span><span contenteditable>0.00</span></td>
+						<td><span contenteditable></span></td>
+						<td><span data-prefix>₹</span><span>0.00</span></td>
+					</tr>
+				</tbody>
+			</table>
+			
+
+
+			<a class="add">+</a>
+			<table class="balance">
+				<tr>
+					<th><span contenteditable>Total</span></th>
+					<td><span data-prefix>₹. </span><span>00.00</span></td>
+				</tr>
+				<tr>
+					<th><span contenteditable>Amount Paid</span></th>
+					<td><span data-prefix>₹. </span><span contenteditable>0.00</span></td>
+				</tr>
+				<tr>
+					<th><span contenteditable>Balance Due</span></th>
+					<td><span data-prefix>₹. </span><span>₹0.00</span></td>
+				</tr>
+			</table>
+		</article>
+		
+
+		<aside>
+			<h1><span contenteditable>Additional Notes</span></h1>
+			<div contenteditable="false">
+				<p></p>
+			</div>
+		</aside>
+	
+	</div>
+
+
+
+					<div><style>p {text-align: center;}</style><h1><br><br><button onclick="window.print()">Print Bill</button></h1><br><br>
+					
+
+
+
+
+
+
+<script>
+var d = new Date();
+document.getElementById("Date").innerHTML = d;
+</script>
+
+
+
+</html>
