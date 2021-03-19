@@ -74,7 +74,7 @@ table.meta:after, table.balance:after { clear: both; content: ""; display: table
 
 /* table meta */
 
-table.meta th { width: 40%; }
+table.meta th { width: 50%; }
 table.meta td { width: 60%; }
 
 /* table items */
@@ -141,6 +141,34 @@ tr:hover .cut { opacity: 1; }
 	span:empty { display: none; }
 	.add, .cut { display: none; }
 }
+
+
+
+body
+{
+  
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: rgb(157, 100, 0);
+    background-color:rgb(209, 255, 244);
+   
+    font-family: sans-serif;
+
+}
+
+.button {
+  background-color: rgb(0, 28, 220);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 
 
 @page { margin: 0; }
