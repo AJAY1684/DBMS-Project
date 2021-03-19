@@ -1,206 +1,298 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Affinity</title>
-    <link rel="icon" href="logo.png" type="icon/png">
-    <link rel="stylesheet" href="projectstyle.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name= "viewport" content="width=device-width,intial-scale=1"> 
-        
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title> Admin Dashboard </title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/font/material-design-icons/Material-Design-Icons.woff'><link rel="stylesheet" href="./style.css">
+
+</head>
 <body>
-    <!-- This data is to get dropdown menu-->
-<div class="menu-bar">
-   <ul>
-       <img src ="logo.png" class = "logo">
-       <li class="active"><a href="#"><i class="fa fa-home"></i>Home</a></li>
-       
-    
-    </li>
-       <li><a href="#"><i class="fa fa-users"></i>clients</a></li>
-       <li><a href="#"><i class="fa fa-clone"></i>Services</a>
-        <div class="sub-menu-1">
-            <ul>
-                <li><a href="https://nallagatlabharath.github.io"target ="_blank"> Products</a><i class="fa fa-angle-right"></i></li>
-                <li><a href="https://DasariRishikesh.github.io/"target ="_blank"> Payment option</a><i class="fa fa-angle-right"></i></li>
-                
-            </ul>
+<!-- partial:index.partial.html -->
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+  <ul id="slide-out" class="side-nav fixed z-depth-2">
+    <li class="center no-padding">
+      <div class="indigo darken-2 white-text" style="height: 180px;">
+        <div class="row">
+          <img style="margin-top: 5%;" width="100" height="100" src="logo.png" class="circle responsive-img" />
+
+          <h1 style="margin-top: -13%;">
+           Affinity
+          </h1>
         </div>
+      </div>
     </li>
-       <li><a href="#"><i class="fa fa-inr"></i>Pricing</a></li>
-       <li><a href="#"><i class="fa fa-phone"></i>Contact Us</a></li>
-       <li><a href="#"><i class="fa fa-user"></i>About</a>
-        
-       <li><a href="https://somasekhar1919.github.io/" target="_blank"><i class="fa fa-sign-in"></i>Login</a></li>
 
-   </ul>
-  
+    <li id="dash_dashboard"><a class="waves-effect" href="#!"><b>Dashboard</b></a></li>
 
+    <ul class="collapsible" data-collapsible="accordion">
+      <li id="dash_users">
+        <div id="dash_users_header" class="collapsible-header waves-effect"><b>Users</b></div>
+        <div id="dash_users_body" class="collapsible-body">
+          <ul>
+            <li id="users_seller">
+              <a class="waves-effect" style="text-decoration: none;" href="#!">Seller</a>
+            </li>
 
+            <li id="users_customer">
+              <a class="waves-effect" style="text-decoration: none;" href="#!">Customer</a>
+            </li>
+          </ul>
+        </div>
+      </li>
 
-</div>
+      <li id="dash_products">
+        <div id="dash_products_header" class="collapsible-header waves-effect"><b>Products</b></div>
+        <div id="dash_products_body" class="collapsible-body">
+          <ul>
+            <li id="products_product">
+              <a class="waves-effect" style="text-decoration: none;" href="#!">Products</a>
+              <a class="waves-effect" style="text-decoration: none;" href="#!">Orders</a>
+            </li>
+          </ul>
+        </div>
+      </li>
 
- <!-- Note-->
- <marquee direction ="left"> <b><br>This web page is under progress</b></marquee>
- <br><h3 style="font-size:400%;color:#bc0c00;">Affinity</h3>
- <!-- This data is for search bar -->
+      <li id="dash_categories">
+        <div id="dash_categories_header" class="collapsible-header waves-effect"><b>Inventory</b></div>
+        <div id="dash_categories_body" class="collapsible-body">
+          <ul>
+            <li id="categories_category">
+              <a class="waves-effect" style="text-decoration: none;" href="#!">Inventory Management</a>
+            </li>
 
-<div class="search">
-    
-    <input type="text" name="box" placeholder=" Search what you want.">
-    <a href="#"><i class="fa fa-search"></i></a>
-   
-</div>
+            <li id="categories_sub_category">
+              <a class="waves-effect" style="text-decoration: none;" href="https://ajay1684.github.io/DBMS-Project/AddProducts.html">Add Products</a>
+            </li>
+          </ul>
+        </div>
+      </li>
 
+      <li id="dash_brands">
+        <div id="dash_brands_header" class="collapsible-header waves-effect"><b>Bills</b></div>
+        <div id="dash_brands_body" class="collapsible-body">
+          <ul>
+            <li id="brands_brand">
+              <a class="waves-effect" style="text-decoration: none;" href="https://ajay1684.github.io/DBMS-Project/ProductBilling.html">Give Bill</a>
+            </li>
 
+            <li id="brands_sub_brand">
+              <a class="waves-effect" style="text-decoration: none;" href="#!">Bills Due by Customers</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </ul>
 
-<!-- Slide Show -->
-<section>
-  <img class="mySlides" src="Supermart.jpg" style="width:100%;height:550px;">
-  <img class="mySlides" src="myproject@2.jpg" style="width:100%;height:550px">
-  <img class="mySlides" src="beverages.jpg" style="width:100%;height:550px">
-</section>
+  <header>
+    <ul class="dropdown-content" id="user_dropdown">
+      <li><a class="indigo-text" href="#!">Profile</a></li>
+      <li><a class="indigo-text" href="#!">Logout</a></li>
+    </ul>
 
-<script>
-// Automatic Slideshow - change image every 3 seconds
-var myIndex = 0;
-carousel();
+    <nav class="indigo" role="navigation">
+      <div class="nav-wrapper">
+        <a data-activates="slide-out" class="button-collapse show-on-" href="#!"><img style="margin-top: 17px; margin-left: 5px;" src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989873/smaller-main-logo_3_bm40iv.gif" /></a>
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}
-  x[myIndex-1].style.display = "block";
-  setTimeout(carousel, 3000);
-}
-</script>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a class='right dropdown-button' href='' data-activates='user_dropdown'><i class=' material-icons'>account_circle</i></a>
+          </li>
+        </ul>
 
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      </div>
+    </nav>
 
-</div>
+    <nav>
+      <div class="nav-wrapper indigo darken-2">
+        <a style="margin-left: 20px;" class="breadcrumb" href="#!">Admin</a>
+        <a class="breadcrumb" href="#!">Index</a>
 
-   <br>
-<h1> Shop for Kitchen </h1><br>
-<section>
+        <div style="margin-right: 20px;" id="timestamp" class="right"></div>
+      </div>
+    </nav>
+  </header>
 
-<div class="row">
-  <div class="column">
-	<div class="card">
-  		<img src="teaspoon.jpg" alt="Tea  Spoon" style="width:100%">
-  		<h2> stainless steel spoon</h2>
-  		<p class="price">Rs. 24.99</p>
-  		<p>Some text about the tea spoon</p>
-  		<p><button>Add to Cart</button></p>
+  <main>
+    <div class="row">
+      <div class="col s6">
+        <div style="padding: 35px;" align="center" class="card">
+          <div class="row">
+            <div class="left card-title">
+              <b>User Management</b>
+            </div>
+          </div>
+
+          <div class="row">
+            <a href="#!">
+              <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
+                <i class="indigo-text text-lighten-1 large material-icons">person</i>
+                <span class="indigo-text text-lighten-1"><h5>Seller</h5></span>
+              </div>
+            </a>
+            <div class="col s1">&nbsp;</div>
+            <div class="col s1">&nbsp;</div>
+
+            <a href="#!">
+              <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
+                <i class="indigo-text text-lighten-1 large material-icons">people</i>
+                <span class="indigo-text text-lighten-1"><h5>Customer</h5></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s6">
+        <div style="padding: 35px;" align="center" class="card">
+          <div class="row">
+            <div class="left card-title">
+              <b>Inventory Management</b>
+            </div>
+          </div>
+          <div class="row">
+            <a href="#!">
+              <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
+                <i class="indigo-text text-lighten-1 large material-icons">store</i>
+                <span class="indigo-text text-lighten-1"><h5>Bills Payable</h5></span>
+              </div>
+            </a>
+
+            <div class="col s1">&nbsp;</div>
+            <div class="col s1">&nbsp;</div>
+
+            <a href="https://ajay1684.github.io/DBMS-Project/AddProducts.html">
+              <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
+                <i class="indigo-text text-lighten-1 large material-icons">assignment</i>
+                <span class="indigo-text text-lighten-1"><h5>Add Products</h5></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
 
-<div class="row">
-  <div class="column">
-	<div class="card">
-  		<img src="spoon-1990179_1920.jpg" alt="Wooden Spoon" style="width:100%">
-  		<h2> stainless steel spoon</h2>
-  		<p class="price">Rs. 29.99/-</p>
-  		<p>Some text about the tea spoon</p>
-  		<p><button>Add to Cart</button></p>
+    <div class="row">
+      <div class="col s6">
+        <div style="padding: 35px;" align="center" class="card">
+          <div class="row">
+            <div class="left card-title">
+              <b>Products</b>
+            </div>
+          </div>
+
+          <div class="row">
+            <a href="#!">
+              <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
+                <i class="indigo-text text-lighten-1 large material-icons">local_offer</i>
+                <span class="indigo-text text-lighten-1"><h5>Show Inventory</h5></span>
+              </div>
+            </a>
+
+            <div class="col s1">&nbsp;</div>
+            <div class="col s1">&nbsp;</div>
+
+            <a href="#!">
+              <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
+                <i class="indigo-text text-lighten-1 large material-icons">loyalty</i>
+                <span class="indigo-text text-lighten-1"><h5>Orders</h5></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s6">
+        <div style="padding: 35px;" align="center" class="card">
+          <div class="row">
+            <div class="left card-title">
+              <b>Customers Management</b>
+            </div>
+          </div>
+          <div class="row">
+            <a href="https://ajay1684.github.io/DBMS-Project/ProductBilling.html">
+              <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
+                <i class="indigo-text text-lighten-1 large material-icons">view_list</i>
+                <span class="indigo-text text-lighten-1"><h5>Bills</h5></span>
+              </div>
+            </a>
+            <div class="col s1">&nbsp;</div>
+            <div class="col s1">&nbsp;</div>
+
+            <a href="#!">
+              <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
+                <i class="indigo-text text-lighten-1 large material-icons">view_list</i>
+                <span class="truncate indigo-text text-lighten-1"><h5>Bills Due</h5>  by customers</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
 
-<div class="row">
-  <div class="column">
-	<div class="card">
-  		<img src="Maggi mega pack.jpg" alt="Maggi mega pack" style="width:100%">
- 		<h2> Maggi mega pack</h2>
-  		<p class="price">Rs. 39.99/-</p>
-  		<p>Some text about the Maggi mega pack 2 mins Noodles masala</p>
-  		<p><button>Add to Cart</button></p>
+    <div class="fixed-action-btn click-to-toggle" style="bottom: 45px; right: 24px;">
+      <a class="btn-floating btn-large pink waves-effect waves-light">
+        <i class="large material-icons">add</i>
+      </a>
+
+      <ul>
+        <li>
+          <a class="btn-floating red"><i class="material-icons">forum</i></a>
+          <a href="" class="btn-floating fab-tip">Chat Services</a>
+        </li>
+
+        <li>
+          <a class="btn-floating yellow darken-1"><i class="material-icons">insert_chart</i></a>
+          <a href="https://analytics.withgoogle.com/" class="btn-floating fab-tip">Shop Analytics</a>
+        </li>
+
+        <li>
+          <a class="btn-floating green"><i class="material-icons">mail</i></a>
+          <a href="http://bit.ly/3tFlyEv" class="btn-floating fab-tip" >Send a Mail</a>
+        </li>
+
+        <li>
+          <a class="btn-floating blue"><i class="material-icons">vpn_key</i></a>
+          <a href="" class="btn-floating fab-tip">Add a master password</a>
+        </li>
+      </ul>
     </div>
-</div>
+  </main>
 
-<div class="row">
-  <div class="column">
-	<div class="card">
-  		<img src="TataSalt.jpg" alt="Tata Salt" style="width:100%">
- 		<h2> Tata Salt</h2>
-  		<p class="price">Rs. 24.99/-</p>
-  		<p>Some text about the Surf Excel</p>
-  		<p><button>Add to Cart</button></p>
+  <footer class="indigo page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h5 class="white-text"> Credits</h5>
+          <ul id='credits'>
+            <li>
+             This is owned by Affinty and is not duplicated or forged from any sources. Duplicating this content is illegal.<br> 
+	All your Products at one Place.<br>Custamize Your inventory with Affinity.
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-</div>
-
-</section>
-
-
-
-
-
-
-  <br>
-<h1> Shop for Home</h1><br>
-<section>
-
-
-<div class="row">
-  <div class="column">
-	<div class="card">
-  		<img src="dettol-santizer.jpg" alt="Dettol hand sanitizer" style="width:100%">
- 		<h2> Hand sanitizer</h2>
-  		<p class="price">Rs. 44.99/-</p>
-  		<p>Some text about the Dettol santizer</p>
-  		<p><button>Add to Cart</button></p>
+    <div class="footer-copyright">
+      <div class="container">
+         <span>Made By Affinity</span>
+      </div>
     </div>
-</div>
+  </footer>
+</body>
 
-<div class="row">
-  <div class="column">
-	<div class="card">
-  		<img src="SurfExcel.jpg" alt="Surf Excel washing Powder" style="width:100%">
- 		<h2> Surf Excel</h2>
-  		<p class="price">Rs. 79.99/-</p>
-  		<p>Some text about the Surf Excel</p>
-  		<p><button>Add to Cart</button></p>
-    </div>
-</div>
-
-<div class="row">
-  <div class="column">
-	<div class="card">
-  		<img src="Hit.jpg" alt="Hit Mosquito killer" style="width:100%">
- 		<h2> Hit</h2>
-  		<p class="price">Rs. 129.99/-</p>
-  		<p>Some text about the Hit  Mosquito Killer</p>
-  		<p><button>Add to Cart</button></p>
-    </div>
-</div>
-
-
-
-
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-<div class="footer">
-  <h2>Our Goal</h2>
-  <p>To help customers to know  the price of the products and<br>
-        get all the products at one place without forgetting any product in a hurry </p>
-   
-</div>
-
-
+</html>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js'></script><script  src="./script.js"></script>
 
 </body>
 </html>
