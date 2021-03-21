@@ -38,13 +38,17 @@ th, td { border-radius: 0.25em; border-style: solid; }
 th { background: #EEE; border-color: #BBB; }
 td { border-color: #DDD; }
 
+
 /* page */
 
 html { font: 16px/1 'Open Sans', sans-serif; overflow: auto; padding: 0.5in; }
 html { background: #999; cursor: default; }
 
-body { box-sizing: border-box; height: 11in; margin: 0 auto; overflow: hidden; padding: 0.5in; width: 8.5in; }
+body { box-sizing: border-box; margin: 0 auto; overflow: hidden; padding: 0.5in; width: auto; }
 body { background: #FFF; border-radius: 1px; box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5); }
+
+
+
 
 /* header */
 
@@ -67,17 +71,7 @@ article h1 { clip: rect(0 0 0 0); position: absolute; }
 
 article address { float: left; font-size: 125%; font-weight: bold; }
 
-/* table meta & balance */
 
-table.meta, table.balance { float: right; width: 36%; }
-table.meta:after, table.balance:after { clear: both; content: ""; display: table; }
-
-/* table meta */
-
-table.meta th { width: 50%; }
-table.meta td { width: 60%; }
-
-/* table items */
 
 table.inventory { clear: both; width: 100%; }
 table.inventory th { font-weight: bold; text-align: center; }
